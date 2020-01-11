@@ -11,7 +11,7 @@ script:
 
 after_success:
   - docker build -t allguitars/multi-client ./client
-  - docker build -t allguitars/multi-nginx ./niginx
+  - docker build -t allguitars/multi-nginx ./nginx
   - docker build -t allguitars/multi-server ./server
   - docker build -t allguitars/multi-worker ./worker
   # Log in to the docker CLI
