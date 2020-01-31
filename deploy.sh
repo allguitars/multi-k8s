@@ -9,7 +9,7 @@ docker push allguitars/multi-client:$SHA
 docker push allguitars/multi-server:$SHA
 docker push allguitars/multi-worker:$SHA
 
-kubecrtl apply -f k8s
+kubectl apply -f k8s
 kubectl set image deployment/client-deployment client=allguitars/multi-client:$SHA
 kubectl set image deployment/server-deployment server=allguitars/multi-server:$SHA
 kubectl set image deployment/worker-deployment worker=allguitars/multi-worker:$SHA
